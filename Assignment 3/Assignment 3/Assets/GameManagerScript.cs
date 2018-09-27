@@ -7,14 +7,15 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject mars;
     public GameObject phobos;
     public GameObject deimos;
+    public GameObject asteroid;
 
     // Use this for initialization
     void Start () {
         Camera.main.transform.position = new Vector3(0f, 0f, -130f);
         Camera.main.transform.LookAt(mars.transform);
         mars.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
-        phobos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
-        deimos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
+        //phobos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
+        //deimos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
 
     }
 	
@@ -23,6 +24,15 @@ public class GameManagerScript : MonoBehaviour {
         phobos.transform.RotateAround(Vector3.zero, Vector3.up, 25 * Time.deltaTime);
         deimos.transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
 
+        float spawnPossibility = Random.Range(0.00f, 10.00f);
+
+        if (spawnPossibility > 9.75f) {
+            GameObject.Instantiate(asteroid);
+            asteroid.transform.position = new Vector3(0f, 0f, -100f);
+            asteroid.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, 2000f));
+        }
+
+            // Camera controls
         if (Input.GetKey(KeyCode.LeftArrow)) {
             Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, 30*Time.deltaTime);
         }
