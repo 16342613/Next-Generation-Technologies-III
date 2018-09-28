@@ -11,11 +11,9 @@ public class GameManagerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Camera.main.transform.position = new Vector3(0f, 0f, -130f);
+        Camera.main.transform.position = new Vector3(0f, 0f, -600f);
         Camera.main.transform.LookAt(mars.transform);
         mars.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
-        //phobos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
-        //deimos.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
 
     }
 	
@@ -26,10 +24,11 @@ public class GameManagerScript : MonoBehaviour {
 
         float spawnPossibility = Random.Range(0.00f, 10.00f);
 
-        if (spawnPossibility > 9.75f) {
-            GameObject.Instantiate(asteroid);
-            asteroid.transform.position = new Vector3(0f, 0f, -100f);
-            asteroid.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, 2000f));
+        if (spawnPossibility > 9.5f)
+        {
+                GameObject.Instantiate(asteroid);
+                asteroid.transform.position = new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), -100f);
+
         }
 
             // Camera controls
