@@ -15,12 +15,16 @@ public class AsteroidScript : MonoBehaviour {
 	void Update () {
         Vector2 viewportPosition = Camera.main.WorldToViewportPoint(this.transform.position);
 
-        if ((viewportPosition.x < 0) || (viewportPosition.x > 1) || (viewportPosition.y < 0) || (viewportPosition.y > 1))
-        {
+        if ((viewportPosition.x < 0) || (viewportPosition.x > 1) || (viewportPosition.y < 0) || (viewportPosition.y > 1)) {
             Destroy(gameObject);
         }
 
     }
 
+    void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.name == "mars") {
+            Destroy(gameObject);
+        }
+    }
 
 }
