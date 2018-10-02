@@ -11,7 +11,7 @@ public class GameManagerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Camera.main.transform.position = new Vector3(0f, 0f, -600f);
+        Camera.main.transform.position = new Vector3(0f, 0f, -200f);
         Camera.main.transform.LookAt(mars.transform);
         mars.GetComponent<Rigidbody>().AddTorque(new Vector3(0f, 20f, 0f));
 
@@ -27,8 +27,7 @@ public class GameManagerScript : MonoBehaviour {
         if (spawnPossibility > 9.5f)
         {
                 GameObject.Instantiate(asteroid);
-                asteroid.transform.position = new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), -100f);
-
+                asteroid.transform.position = new Vector3(Random.Range(-250, -200), Random.Range(-50, 50), Random.Range(-20, 20));
         }
 
             // Camera controls
