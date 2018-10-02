@@ -24,13 +24,12 @@ public class GameManagerScript : MonoBehaviour {
 
         float spawnPossibility = Random.Range(0.00f, 10.00f);
 
-        if (spawnPossibility > 9.5f)
-        {
+        if (spawnPossibility > 9.5f) {
                 GameObject.Instantiate(asteroid);
                 asteroid.transform.position = new Vector3(Random.Range(-250, -200), Random.Range(-50, 50), Random.Range(-20, 20));
         }
 
-            // Camera controls
+        // Camera controls
         if (Input.GetKey(KeyCode.LeftArrow)) {
             Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, 30*Time.deltaTime);
         }
@@ -47,6 +46,7 @@ public class GameManagerScript : MonoBehaviour {
             Camera.main.transform.RotateAround(Vector3.zero, Vector3.left, 30 * Time.deltaTime);
         }
 
+        // Reset camera 
         if (Input.GetKey(KeyCode.Space)) {
             Camera.main.transform.position = new Vector3(0f, 0f, -130f);
             Camera.main.transform.LookAt(mars.transform);
