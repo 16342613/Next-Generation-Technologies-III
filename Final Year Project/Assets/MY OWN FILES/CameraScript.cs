@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour {
 
 
     void Start () {
-        Camera.main.transform.position = new Vector3(90f, 56f, 60f);
+        Camera.main.transform.position = new Vector3(160f, 51.8f, 160f);
         Camera.main.transform.LookAt(house.transform);
     }
 
