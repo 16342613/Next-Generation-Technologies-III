@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour {
 
 
     void Start () {
-        Camera.main.transform.position = new Vector3(90f, 6f, 60f);
+        Camera.main.transform.position = new Vector3(90f, 56f, 60f);
         Camera.main.transform.LookAt(house.transform);
     }
 
@@ -60,7 +60,7 @@ public class CameraScript : MonoBehaviour {
         }
         //float height = (Mathf.Cos(Time.time*2)/8)+5;
         //Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, height, Camera.main.transform.position.z);
-        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, 6, Camera.main.transform.position.z);
+        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, 51.8f, Camera.main.transform.position.z);
     }
 
     private Vector3 GetBaseInput()
