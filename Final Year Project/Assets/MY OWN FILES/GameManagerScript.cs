@@ -13,6 +13,7 @@ public class GameManagerScript : MonoBehaviour {
 	void Update () {
         QualitySettings.vSyncCount = 0;  // Disable vsync
         Application.targetFrameRate = 60;  // Set fps
+        Camera.main.fieldOfView = 45f;
 
     }
 }
