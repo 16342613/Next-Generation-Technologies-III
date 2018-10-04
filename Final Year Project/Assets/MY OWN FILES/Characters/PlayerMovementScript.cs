@@ -6,6 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
 {
 
     Animator mAnim;
+    public float range;
 
     // Use this for initialization
     void Start()
@@ -17,25 +18,33 @@ public class PlayerMovementScript : MonoBehaviour
     void Update()
     {
         // Walking forward
-        if (Input.GetKeyDown(KeyCode.W))
+        float leftStickHorizontal = Input.GetAxisRaw("LeftJoyStickHorizontal");
+        float leftStickVertical = Input.GetAxisRaw("LeftJoyStickVertical");
+        float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
+        float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
+
+        Debug.Log("Value Returned: " + rightStickHorizontal.ToString("F2"));
+
+
+        if (leftStickVertical > 0.1)
         {
             mAnim.SetTrigger("Walk Forward");
 
         }
-        if (Input.GetKeyUp(KeyCode.W))
+        if (leftStickVertical < 0.1)
         {
             mAnim.SetTrigger("Stop Walking Forward");
 
         }
 
-        // Walking/Looking right
-        if (Input.GetKey(KeyCode.D))
+        // Walking/Looking left/right
+        if (rightStickHorizontal > 0.1)
         {
-            GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, 50 * Time.deltaTime);
+            GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (rightStickHorizontal < -0.1)
         {
-            GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, -50 * Time.deltaTime);
+            GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         }
 
     }
