@@ -6,7 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
 {
 
     Animator mAnim;
-    public float range;
+
 
     // Use this for initialization
     void Start()
@@ -25,10 +25,10 @@ public class PlayerMovementScript : MonoBehaviour
 
        // if (Input.GetKey(KeyCode.JoystickButton10))
         //{
-         //   Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2")+ "HIHIHI");
+           //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
         //}
 
-        if (leftStickVertical > 0.1)
+        if (leftStickVertical > 0.15 && leftStickHorizontal < 0.15)
         {
             if (Input.GetKey(KeyCode.JoystickButton10))
             {
@@ -36,27 +36,31 @@ public class PlayerMovementScript : MonoBehaviour
             }
             else mAnim.SetTrigger("Walk Forward");
         }
-        if (leftStickVertical < -0.1)
+        if (leftStickVertical < -0.15 && leftStickHorizontal < 0.15)
         {
             mAnim.SetTrigger("Walk Backward");
 
         }
-        if (leftStickVertical < 0.1 && leftStickVertical > -0.1)
+        if (leftStickVertical < 0.15 && leftStickVertical > -0.15)
         {
             mAnim.SetTrigger("Stop Walking");
         }
-        if (leftStickHorizontal < -0.1)
+        if (leftStickHorizontal < -0.15)
         {
-            mAnim.SetTrigger("Strafe Left");
-
+            //mAnim.SetTrigger("Strafe Left");
+        }
+        if(leftStickHorizontal > 0.15)
+        {
+            mAnim.SetTrigger("Strafe Right");
+            Debug.Log("HERE!");
         }
 
         // Walking/Looking left/right
-        if (rightStickHorizontal > 0.1)
+        if (rightStickHorizontal > 0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         }
-        if (rightStickHorizontal < -0.1)
+        if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         }
