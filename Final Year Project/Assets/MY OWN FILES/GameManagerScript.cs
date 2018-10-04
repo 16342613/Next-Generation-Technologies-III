@@ -11,8 +11,8 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        QualitySettings.vSyncCount = 0;  // Disable vsync
-        Application.targetFrameRate = 60;  // Set fps
+        QualitySettings.vSyncCount = 1;  // Enable vsync
+        
         Camera.main.fieldOfView = 45f;
 
     }

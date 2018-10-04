@@ -23,13 +23,18 @@ public class PlayerMovementScript : MonoBehaviour
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
         float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
 
-        //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
-
+       // if (Input.GetKey(KeyCode.JoystickButton10))
+        //{
+         //   Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2")+ "HIHIHI");
+        //}
 
         if (leftStickVertical > 0.1)
         {
-            mAnim.SetTrigger("Walk Forward");
-
+            if (Input.GetKey(KeyCode.JoystickButton10))
+            {
+                mAnim.SetTrigger("Run Forward");
+            }
+            else mAnim.SetTrigger("Walk Forward");
         }
         if (leftStickVertical < -0.1)
         {
@@ -39,6 +44,11 @@ public class PlayerMovementScript : MonoBehaviour
         if (leftStickVertical < 0.1 && leftStickVertical > -0.1)
         {
             mAnim.SetTrigger("Stop Walking");
+        }
+        if (leftStickHorizontal < -0.1)
+        {
+            mAnim.SetTrigger("Strafe Left");
+
         }
 
         // Walking/Looking left/right
