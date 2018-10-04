@@ -23,7 +23,7 @@ public class PlayerMovementScript : MonoBehaviour
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
         float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
 
-        Debug.Log("Value Returned: " + rightStickHorizontal.ToString("F2"));
+        //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
 
 
         if (leftStickVertical > 0.1)
@@ -31,10 +31,14 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Walk Forward");
 
         }
-        if (leftStickVertical < 0.1)
+        if (leftStickVertical < -0.1)
         {
-            mAnim.SetTrigger("Stop Walking Forward");
+            mAnim.SetTrigger("Walk Backward");
 
+        }
+        if (leftStickVertical < 0.1 && leftStickVertical > -0.1)
+        {
+            mAnim.SetTrigger("Stop Walking");
         }
 
         // Walking/Looking left/right
@@ -46,6 +50,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         }
+
 
     }
 }
