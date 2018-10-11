@@ -19,7 +19,7 @@ public class AsteroidScript : MonoBehaviour
 
     void CheckOutOfBounds()
     {
-        if ((this.transform.position.x > 30) || (this.transform.position.x < -30))
+        if ((this.transform.position.x > 31) || (this.transform.position.x < -31))
         {
             Vector3 lastKnownPosition = this.transform.position;
             this.transform.position = new Vector3(-lastKnownPosition.x, lastKnownPosition.y, lastKnownPosition.z);  // Reverse x
