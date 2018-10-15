@@ -2,26 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidScript : MonoBehaviour {
+public class SpaceShipScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)));  // Apply random force
-    }
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {
-        InvokeRepeating("CheckOutOfBounds", 0f, 0.2f);  // Check bounds 5x per second
-	}
+        CheckKeys();
+        CheckOutOfBounds();
+    }
 
-<<<<<<< HEAD
-    void CheckOutOfBounds()
-    {
-        if ((this.transform.position.x > 31) || (this.transform.position.x < -31))
-=======
     void CheckOutOfBounds() {
-        if ((this.transform.position.x > 30) || (this.transform.position.x < -30))
->>>>>>> 5e7774b02a017db68286f189c8abc68357475cd2
+        if ((this.transform.position.x > 50) || (this.transform.position.x < -50))
         {
             Vector3 lastKnownPosition = this.transform.position;
             this.transform.position = new Vector3(-lastKnownPosition.x, lastKnownPosition.y, lastKnownPosition.z);  // Reverse x
@@ -30,6 +25,20 @@ public class AsteroidScript : MonoBehaviour {
         {
             Vector3 lastKnownPosition = this.transform.position;
             this.transform.position = new Vector3(lastKnownPosition.x, lastKnownPosition.y, -lastKnownPosition.z);  // Reverse z
+        }
+    }
+
+    void CheckKeys() {
+        if(Input.GetKey(KeyCode.RightArrow)) {
+            this.transform.Rotate(Vector3.up, Space.World);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.transform.Rotate(Vector3.down, Space.World);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            this.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 3, 0));
         }
     }
 }
