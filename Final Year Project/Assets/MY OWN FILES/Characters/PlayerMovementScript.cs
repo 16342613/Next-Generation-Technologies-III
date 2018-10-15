@@ -23,12 +23,12 @@ public class PlayerMovementScript : MonoBehaviour
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
         float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
 
-        // if (Input.GetKey(KeyCode.JoystickButton10))
+       // if (Input.GetKey(KeyCode.JoystickButton10))
         //{
-        //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
+           //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
         //}
 
-        /*if (leftStickVertical > 0.15 && leftStickHorizontal < 0.15)
+        if (leftStickVertical > 0.15 && leftStickHorizontal < 0.15)
         {
             if (Input.GetKey(KeyCode.JoystickButton10))
             {
@@ -64,6 +64,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         } */
 >>>>>>> parent of 6e0bbfe... ye
@@ -89,7 +90,10 @@ public class PlayerMovementScript : MonoBehaviour
 
 >>>>>>> parent of 6e0bbfe... ye
 
+=======
+>>>>>>> parent of c2e6c1e... update
         }
+
 
     }
 }
