@@ -63,8 +63,8 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
-<<<<<<< HEAD
-        } */
+
+        } 
 
 
         if (Input.GetKey(KeyCode.W))
@@ -75,8 +75,7 @@ public class PlayerMovementScript : MonoBehaviour
         else
         {
             mAnim.SetTrigger("Stop Walking");
-=======
->>>>>>> 5e7774b02a017db68286f189c8abc68357475cd2
+
         }
         
 
