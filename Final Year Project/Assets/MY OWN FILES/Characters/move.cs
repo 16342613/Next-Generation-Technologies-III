@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementScript : MonoBehaviour
+public class move : MonoBehaviour
 {
 
     Animator mAnim;
@@ -23,9 +23,9 @@ public class PlayerMovementScript : MonoBehaviour
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
         float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
 
-       // if (Input.GetKey(KeyCode.JoystickButton10))
+        // if (Input.GetKey(KeyCode.JoystickButton10))
         //{
-           //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
+        //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
         //}
 
         if (leftStickVertical > 0.15 && leftStickHorizontal < 0.15)
@@ -49,7 +49,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             //mAnim.SetTrigger("Strafe Left");
         }
-        if(leftStickHorizontal > 0.15)
+        if (leftStickHorizontal > 0.15)
         {
             mAnim.SetTrigger("Strafe Right");
             Debug.Log("HERE!");
@@ -63,7 +63,7 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
-        } 
+        }
 
 
 
@@ -80,11 +80,11 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Stop Walking");
 
         }
-        
 
-
-        }
 
 
     }
+
+
+}
 
