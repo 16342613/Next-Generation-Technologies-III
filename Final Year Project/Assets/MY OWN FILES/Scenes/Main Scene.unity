@@ -4005,21 +4005,6 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 114514256219447262, guid: 0ca57987055af084399271cfcc9844c2,
-        type: 2}
-      propertyPath: waveHeight
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114514256219447262, guid: 0ca57987055af084399271cfcc9844c2,
-        type: 2}
-      propertyPath: waveFrequency
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114514256219447262, guid: 0ca57987055af084399271cfcc9844c2,
-        type: 2}
-      propertyPath: waveLength
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1611391958943086, guid: 0ca57987055af084399271cfcc9844c2, type: 2}
       propertyPath: m_Name
       value: Manor's Moat
