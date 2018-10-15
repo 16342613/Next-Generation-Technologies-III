@@ -7,12 +7,15 @@ public class GameManagerScript : MonoBehaviour
 
     public int currentGameLevel;
     public GameObject asteroid;
+    public GameObject spaceship;
 
     // Use this for initialization
     void Start()
     {
+        // Set camera position
         Camera.main.transform.position = new Vector3(0f, 30f, 0f);
         Camera.main.transform.LookAt(Vector3.zero);
+        CreatePlayerSpaceship();
         StartGameLevel();
     }
 
@@ -25,7 +28,6 @@ public class GameManagerScript : MonoBehaviour
     void StartGameLevel()
     {
         Vector3 vToW = Camera.main.ViewportToWorldPoint(new Vector3((float)0.9, (float)0.9, 0));
-        Debug.Log(vToW.y);
         // Spawn 2 asteroids on each edge
         for (int i = 0; i < 4; i++)
         {
@@ -50,5 +52,11 @@ public class GameManagerScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    void CreatePlayerSpaceship()
+    {
+        GameObject.Instantiate(spaceship);
+        spaceship.transform.position = Vector3.zero;
     }
 }
