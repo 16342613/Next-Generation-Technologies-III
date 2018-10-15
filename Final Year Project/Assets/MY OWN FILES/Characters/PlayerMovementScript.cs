@@ -63,18 +63,10 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
-        } */
+        } 
 
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            mAnim.SetTrigger("Walk Forward");
-            Debug.Log("heeee");
-        }
-        else
-        {
-            mAnim.SetTrigger("Stop Walking");
-        }
+        
         
 
 
