@@ -64,22 +64,6 @@ public class PlayerMovementScript : MonoBehaviour
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
         } 
-
-
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                mAnim.SetTrigger("Run Forward");
-            }
-            else mAnim.SetTrigger("Walk Forward");
-        }
-        if (!Input.anyKeyDown)
-        {
-            mAnim.SetTrigger("Stop Walking");
-
-        }
         
 
 
