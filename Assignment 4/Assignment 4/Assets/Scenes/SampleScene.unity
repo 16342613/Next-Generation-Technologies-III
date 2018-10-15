@@ -26,11 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-<<<<<<< HEAD
   m_SkyboxMaterial: {fileID: 2100000, guid: 9043cab1804c6524f9d45836c19cd250, type: 2}
-=======
-  m_SkyboxMaterial: {fileID: 2100000, guid: adfd386f9bdc1af4c9e9b86fb05537d6, type: 2}
->>>>>>> 5e7774b02a017db68286f189c8abc68357475cd2
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -42,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.45830715, g: 0.4578045, b: 0.4587409, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.45831245, g: 0.45780396, b: 0.4587441, a: 1}
->>>>>>> 5e7774b02a017db68286f189c8abc68357475cd2
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,48 +179,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &479457114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 479457116}
-  - component: {fileID: 479457115}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &479457115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479457114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9af2bab7a2ca454ab5aafc2e84cafcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentGameLevel: 0
-  asteroid: {fileID: 1630845517167718, guid: 114279033b1fbb549a01aba268bcaca6, type: 2}
---- !u!4 &479457116
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479457114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +255,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &936670070
 GameObject:
@@ -349,6 +298,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-=======
->>>>>>> 5e7774b02a017db68286f189c8abc68357475cd2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
