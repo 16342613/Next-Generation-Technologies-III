@@ -27,7 +27,10 @@ public class GameManagerScript : MonoBehaviour
 
     void StartGameLevel()
     {
+<<<<<<< HEAD
         Vector3 vToW = Camera.main.ViewportToWorldPoint(new Vector3((float)0.9, (float)0.9, 0));
+=======
+>>>>>>> parent of 9c1e256... update
         // Spawn 2 asteroids on each edge
         for (int i = 0; i < 4; i++)
         {

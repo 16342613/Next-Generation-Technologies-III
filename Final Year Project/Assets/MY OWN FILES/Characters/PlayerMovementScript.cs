@@ -67,19 +67,19 @@ public class PlayerMovementScript : MonoBehaviour
         } 
 
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            mAnim.SetTrigger("Walk Forward");
-            Debug.Log("heeee");
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                mAnim.SetTrigger("Run Forward");
+            }
+            else mAnim.SetTrigger("Walk Forward");
         }
-        else
+        if (!Input.anyKeyDown)
         {
             mAnim.SetTrigger("Stop Walking");
 
         }
-        
-
-
 
 
     }
