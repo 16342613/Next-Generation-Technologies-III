@@ -18,7 +18,7 @@ public class PlayerMovementScript : MonoBehaviour
     void Update()
     {
         // Walking forward
-        float leftStickHorizontal = Input.GetAxisRaw("LeftJoyStickHorizontal");
+       /* float leftStickHorizontal = Input.GetAxisRaw("LeftJoyStickHorizontal");
         float leftStickVertical = Input.GetAxisRaw("LeftJoyStickVertical");
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
         float rightStickVertical = Input.GetAxisRaw("RightJoyStickVertical");
@@ -63,10 +63,33 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
-        } 
+        } */
 
 
-
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            mAnim.SetTrigger("Run Forward");
+        }
+        else if(Input.GetButton("Forward"))
+        {
+            mAnim.SetTrigger("Walk Forward");
+        }
+        else if(Input.GetButton("Backward"))
+        {
+            mAnim.SetTrigger("Walk Backward");
+        }
+        else if(Input.GetButton("Right"))
+        {
+            mAnim.SetTrigger("Strafe Right");
+        }
+        else if(Input.GetButton("Left"))
+        {
+            mAnim.SetTrigger("Strafe Left");
+        }
+        else
+        {
+            mAnim.SetTrigger("Stop Walking");
+        }
         
         
 
