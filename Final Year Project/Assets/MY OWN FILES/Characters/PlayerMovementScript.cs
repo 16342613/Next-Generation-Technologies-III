@@ -78,7 +78,7 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.Log(Input.GetAxis("Mouse X"));
     }
 
-<<<<<<< HEAD
+
     void checkKeys()
     {
         if (Input.GetButton("Forward"))
@@ -106,11 +106,7 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Stop Walking");
         }
     }
-=======
 
-        
-        
->>>>>>> 479fa23938f2636579b4266a2919d8eecf25f896
 
     void checkLook()
     {
