@@ -71,13 +71,19 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
+<<<<<<< HEAD
         }
+=======
+        } 
+
+>>>>>>> parent of c08f1b5... update
 
         checkKeys();
         checkLook();
         Debug.Log(Input.GetAxis("Mouse X"));
     }
 
+<<<<<<< HEAD
 
     void checkKeys()
     {
@@ -106,6 +112,10 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Stop Walking");
         }
     }
+=======
+        
+        
+>>>>>>> parent of c08f1b5... update
 
 
     void checkLook()

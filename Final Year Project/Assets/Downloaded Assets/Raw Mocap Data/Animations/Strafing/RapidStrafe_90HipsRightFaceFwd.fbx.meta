@@ -194,18 +194,23 @@ ModelImporter:
     - serializedVersion: 16
       name: RapidStrafe_90HipsRightFaceFwd
       takeName: _59_a_U1_M_P_RapidStrafe_90HipsRightFaceFwd__Fb_p90_No_0_PJ_2
+<<<<<<< HEAD
       firstFrame: 299
       lastFrame: 319
+=======
+      firstFrame: 56
+      lastFrame: 509
+>>>>>>> parent of c08f1b5... update
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
