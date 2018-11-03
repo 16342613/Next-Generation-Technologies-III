@@ -194,8 +194,18 @@ ModelImporter:
     - serializedVersion: 16
       name: RapidStrafe_90HipsRightFaceFwd
       takeName: _59_a_U1_M_P_RapidStrafe_90HipsRightFaceFwd__Fb_p90_No_0_PJ_2
+<<<<<<< HEAD
       firstFrame: 300
       lastFrame: 320
+=======
+<<<<<<< HEAD
+      firstFrame: 299
+      lastFrame: 319
+=======
+      firstFrame: 56
+      lastFrame: 509
+>>>>>>> parent of c08f1b5... update
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -267,7 +277,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
+<<<<<<< HEAD
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+=======
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2ab0893f5bba9b243b65e309e78089d0,
+    type: 3}
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

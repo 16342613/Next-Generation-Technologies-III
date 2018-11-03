@@ -893,6 +893,7 @@ AnimatorState:
   - {fileID: 1101240341911434726}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1101495205679744518}
 =======
 <<<<<<< HEAD
@@ -903,6 +904,11 @@ AnimatorState:
 =======
 >>>>>>> 211e3ed0d9b009ad5e5ba96b53f0e2c8bf9d0c86
 >>>>>>> b15ee9bc3e3577ce0593ca569782ad6a534c63de
+=======
+  - {fileID: 1101494517443692322}
+=======
+>>>>>>> parent of c08f1b5... update
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
   - {fileID: 1101494517443692322}
 =======
@@ -953,7 +959,6 @@ AnimatorStateMachine:
     m_State: {fileID: 1102208908268354622}
     m_Position: {x: 384, y: -204, z: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   - serializedVersion: 1
     m_State: {fileID: 1102105316645901022}
     m_Position: {x: 360, y: 372, z: 0}
@@ -968,9 +973,12 @@ AnimatorStateMachine:
 =======
 >>>>>>> parent of c08f1b5... update
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 211e3ed0d9b009ad5e5ba96b53f0e2c8bf9d0c86
 >>>>>>> b15ee9bc3e3577ce0593ca569782ad6a534c63de
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
   m_ChildStateMachines: []
@@ -1048,11 +1056,14 @@ AnimatorStateTransition:
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 2
+<<<<<<< HEAD
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 =======
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
@@ -1203,9 +1214,12 @@ AnimatorStateTransition:
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1101 &1101495205679744518
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 --- !u!1101 &1101494517443692322
@@ -1243,11 +1257,14 @@ AnimatorStateTransition:
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 211e3ed0d9b009ad5e5ba96b53f0e2c8bf9d0c86
 >>>>>>> b15ee9bc3e3577ce0593ca569782ad6a534c63de
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 --- !u!1101 &1101495282478885606
@@ -1446,10 +1463,13 @@ AnimatorState:
   m_TimeParameter: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1102 &1102105316645901022
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 --- !u!1102 &1102164688066722452
@@ -1490,9 +1510,12 @@ AnimatorState:
 =======
 >>>>>>> parent of c08f1b5... update
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 211e3ed0d9b009ad5e5ba96b53f0e2c8bf9d0c86
 >>>>>>> b15ee9bc3e3577ce0593ca569782ad6a534c63de
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 --- !u!1102 &1102208908268354622

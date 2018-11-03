@@ -73,10 +73,13 @@ public class PlayerMovementScript : MonoBehaviour
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } */
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 =======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
         }
@@ -93,6 +96,9 @@ public class PlayerMovementScript : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
 
     void checkKeys()
     {
@@ -130,6 +136,7 @@ public class PlayerMovementScript : MonoBehaviour
         
 >>>>>>> parent of c08f1b5... update
 
+<<<<<<< HEAD
 
     void checkLook()
     {
@@ -166,10 +173,24 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Stop Walking");
         }
 =======
+=======
+
+    void checkLook()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = -Input.GetAxis("Mouse Y");
+
+        rotY += mouseX * mouseSensitivity * Time.deltaTime;
+        rotX += mouseY * mouseSensitivity * Time.deltaTime;
+
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
         rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
         transform.rotation = localRotation;
+<<<<<<< HEAD
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
+=======
 >>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
     }
 }
