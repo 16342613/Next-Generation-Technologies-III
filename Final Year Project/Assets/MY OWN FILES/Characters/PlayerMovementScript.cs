@@ -91,6 +91,7 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     void checkKeys()
     {
@@ -120,6 +121,8 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 =======
+=======
+>>>>>>> parent of 479fa23... update
         
         
 >>>>>>> parent of c08f1b5... update
