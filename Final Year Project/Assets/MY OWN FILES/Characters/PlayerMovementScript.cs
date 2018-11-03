@@ -6,18 +6,26 @@ public class PlayerMovementScript : MonoBehaviour
 {
 
     Animator mAnim;
+    public float mouseSensitivity = 100.0f;
+    public float clampAngle = 80.0f;
+
+    private float rotY = 0.0f; // rotation around the up/y axis
+    private float rotX = 0.0f; // rotation around the right/x axis
 
 
     // Use this for initialization
     void Start()
     {
         mAnim = GameObject.FindWithTag("Player").GetComponent<Animator>();
+        Vector3 rot = transform.localRotation.eulerAngles;
+        rotY = rot.y;
+        rotX = rot.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Walking forward
+        /*// Walking forward
         float leftStickHorizontal = Input.GetAxisRaw("LeftJoyStickHorizontal");
         float leftStickVertical = Input.GetAxisRaw("LeftJoyStickVertical");
         float rightStickHorizontal = Input.GetAxisRaw("RightJoyStickHorizontal");
@@ -27,7 +35,7 @@ public class PlayerMovementScript : MonoBehaviour
         //{
            //Debug.Log("Value Returned: " + leftStickHorizontal.ToString("F2"));
         //}
-
+/*
         if (leftStickVertical > 0.15 && leftStickHorizontal < 0.15)
         {
             if (Input.GetKey(KeyCode.JoystickButton10))
@@ -54,7 +62,7 @@ public class PlayerMovementScript : MonoBehaviour
             mAnim.SetTrigger("Strafe Right");
             Debug.Log("HERE!");
         }
-
+*/
         // Walking/Looking left/right
         if (rightStickHorizontal > 0.15)
         {
@@ -63,15 +71,99 @@ public class PlayerMovementScript : MonoBehaviour
         if (rightStickHorizontal < -0.15)
         {
             GameObject.FindWithTag("Player").transform.Rotate(Vector3.up, (rightStickHorizontal / 3) * 4);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        } */
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
+        }
+=======
         } 
 
+>>>>>>> parent of c08f1b5... update
 
+        checkKeys();
+        checkLook();
+        Debug.Log(Input.GetAxis("Mouse X"));
+    }
 
+<<<<<<< HEAD
+
+    void checkKeys()
+    {
+        if (Input.GetButton("Forward"))
+        {
+            mAnim.SetTrigger("Walk Forward");
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            mAnim.SetTrigger("Run Forward");
+        }
+        else if (Input.GetButton("Backward"))
+        {
+            mAnim.SetTrigger("Walk Backward");
+        }
+        else if (Input.GetButton("Left"))
+        {
+            mAnim.SetTrigger("Strafe Left");
+        }
+        else if (Input.GetButton("Right"))
+        {
+            mAnim.SetTrigger("Strafe Right");
+        }
+        else
+        {
+            mAnim.SetTrigger("Stop Walking");
+        }
+    }
+=======
         
         
+>>>>>>> parent of c08f1b5... update
 
 
+    void checkLook()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = -Input.GetAxis("Mouse Y");
 
+        rotY += mouseX * mouseSensitivity * Time.deltaTime;
+        rotX += mouseY * mouseSensitivity * Time.deltaTime;
 
+<<<<<<< HEAD
+>>>>>>> b15ee9bc3e3577ce0593ca569782ad6a534c63de
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            mAnim.SetTrigger("Run Forward");
+        }
+        else if(Input.GetButton("Forward"))
+        {
+            mAnim.SetTrigger("Walk Forward");
+        }
+        else if (Input.GetButton("Backward"))
+        {
+            mAnim.SetTrigger("Walk Backward");
+        }
+        else if (Input.GetButton("Right"))
+        {
+            mAnim.SetTrigger("Strafe Right");
+        }
+        else if (Input.GetButton("Left"))
+        {
+            mAnim.SetTrigger("Strafe Left");
+        } else
+        {
+            mAnim.SetTrigger("Stop Walking");
+        }
+=======
+        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
+
+        Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
+        transform.rotation = localRotation;
+>>>>>>> parent of b15ee9b... Merge branch 'master' of https://github.com/16342613/Next-Generation-Technologies-III
     }
 }
